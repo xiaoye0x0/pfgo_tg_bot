@@ -1,0 +1,10 @@
+version: '3'
+services:
+  dev:
+    image: python:3.9.18-alpine
+    volumes:
+      - ../:/TG_BOT
+    restart: always
+    network_mode: host
+    container_name: TG
+    command: tail -f /TG_BOT/build/dev.yml
